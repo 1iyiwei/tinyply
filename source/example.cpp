@@ -12,6 +12,8 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+#include <string>
+using namespace std;
 
 #include "tinyply.h"
 
@@ -223,7 +225,17 @@ void read_ply_file(const std::string & filename)
 
 int main(int argc, char *argv[])
 {
-    write_ply_example("example_junk.ply");
-    read_ply_file("example_junk.ply");
+    int arg_ctr = 0;
+    
+    const string example_file_path = "example_junk.ply"; // junk came from Dimitri, not me.....
+    const string input_file_path = ((arg_ctr + 1) < argc ? argv[++arg_ctr] : example_file_path);
+
+    if(input_file_path == example_file_path)
+    {
+        write_ply_example(input_file_path);
+    }
+
+    read_ply_file(input_file_path);
+
     return 0;
 }
