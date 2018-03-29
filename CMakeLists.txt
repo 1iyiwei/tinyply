@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-project(tinyply LANGUAGES CXX)
+project(tinyply)
 set(PROJECT_VERSION 2.0)
 
 include_directories("${CMAKE_SOURCE_DIR}/source")
